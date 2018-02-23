@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(methodOverride('_method'))
 
+require('./src/config/db')
+
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'src/view'))
 

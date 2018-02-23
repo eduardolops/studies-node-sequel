@@ -13,4 +13,6 @@ conn.authenticate()
     .then( () => console.log('OK!!') )
     .catch( () => console.log('ERROR!!') )
 
+conn.sync()
+
 module.exports = conn

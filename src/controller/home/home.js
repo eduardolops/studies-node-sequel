@@ -1,9 +1,7 @@
-const Sequelize = require('../../config/db')
-const Event = Sequelize.import('../../model/event')
-
 
 module.exports = (req, res) => {
-  return res.render('home', {
-    title: 'Teste'
-  })
+	return res.render('home/index', {
+		title: 'Home',
+		msg: 'Welcome to Events app'
+	}) 
 }

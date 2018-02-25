@@ -9,9 +9,15 @@ block content
                 th #
                 th Event Name
                 th Event Description
+                th Actions
         tbody
             each event in events
               tr
                 td=event.id
                 td=event.name
                 td=event.description
+                td
+                    a(href="/events/" + event.id, class="btn btn-info btn-sm btn-block") More 
+                    a(href="/events/edit/" + event.id, class="btn btn-primary btn-sm btn-block") Edit
+                    form(action="/events/" + event.id + "/?_method=DELETE" method="POST")
+                        button(type="submit", class="btn btn-danger btn-sm btn-block", style="margin-top:8px;cursor:pointer") Remove
